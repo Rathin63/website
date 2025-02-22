@@ -5,18 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Rathin K. Joshi - Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        .container { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
-        h1, h2 { color: #333; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://www.sciencenews.org/wp-content/uploads/2020/01/011720_mt_brain-record_feat.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        h1, h2 { color: #f4b400; }
         .section { margin-bottom: 20px; }
         ul { padding-left: 20px; }
-        a { color: #007bff; text-decoration: none; }
+        a { color: #ffcc00; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .navbar { background-color: #007bff; padding: 10px; text-align: center; }
-        .navbar a { color: white; padding: 10px 20px; text-decoration: none; display: inline-block; }
-        .navbar a:hover { background-color: #0056b3; }
+        .navbar {
+            background-color: #ff5733;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .navbar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover { background-color: #c70039; }
         .content { display: none; }
         .active { display: block; }
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; }
+            .container { width: 90%; }
+        }
     </style>
     <script>
         function showSection(sectionId) {
@@ -31,9 +60,10 @@
         <a href="#" onclick="showSection('experience')">Experience</a>
         <a href="#" onclick="showSection('research')">Research</a>
         <a href="#" onclick="showSection('skills')">Skills</a>
-        <a href="#" onclick="showSection('patents')">Patents</a>
         <a href="#" onclick="showSection('publications')">Publications</a>
+        <a href="#" onclick="showSection('patents')">Patents</a>
         <a href="#" onclick="showSection('awards')">Awards</a>
+        <a href="#" onclick="showSection('teaching')">Teaching</a>
         <a href="#" onclick="showSection('achievements')">Achievements</a>
     </div>
     
@@ -62,51 +92,35 @@
             </ul>
         </div>
         
-        <div id="research" class="content section">
-            <h2>Research Projects</h2>
-            <ul>
-                <li>Portable neonatal hearing screening system</li>
-                <li>Algorithm for epileptic seizure detection</li>
-                <li>Wearable sleep band for improved sleep quality</li>
-            </ul>
-        </div>
-        
-        <div id="skills" class="content section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Biomedical Signal Processing</li>
-                <li>Artificial Intelligence & Machine Learning</li>
-                <li>MATLAB, Python, Perl</li>
-            </ul>
-        </div>
-        
-        <div id="patents" class="content section">
-            <h2>Patents</h2>
-            <ul>
-                <li>Headband for Sensory Pathway Scanning</li>
-                <li>Device for EEG Pattern Extraction</li>
-            </ul>
-        </div>
-        
         <div id="publications" class="content section">
             <h2>Publications</h2>
-            <p>See full list on <a href="https://bit.ly/3ZI6y9h" target="_blank">Google Scholar</a>.</p>
+            <ul>
+                <li>Spatiotemporal Analysis of Interictal EEG - <a href="#" target="_blank">Read More</a></li>
+                <li>Automated ABR and MMN Extraction - <a href="#" target="_blank">Read More</a></li>
+            </ul>
         </div>
         
         <div id="awards" class="content section">
             <h2>Awards & Recognitions</h2>
             <ul>
                 <li>SITARE-GYTI appreciation for neonatal hearing screening research</li>
-                <li>Winner of SHIFT Health Hackathon for affordable neonatal deafness screener</li>
+                <li>Winner of SHIFT Health Hackathon</li>
+            </ul>
+        </div>
+        
+        <div id="teaching" class="content section">
+            <h2>Teaching Experience</h2>
+            <ul>
+                <li>TA for Design for Analog Circuits, IISc Bangalore</li>
+                <li>TA for Process Technology and System Engineering</li>
             </ul>
         </div>
         
         <div id="achievements" class="content section">
-            <h2>Other Achievements</h2>
+            <h2>Achievements</h2>
             <ul>
                 <li>Represented college in intercollegiate chess competitions</li>
-                <li>265th rank in MATLAB Cody (out of 123,000 active members)</li>
-                <li>GATE 2013 Score: 709/1000 (AIR 1667 - 99.35%ile)</li>
+                <li>GATE 2013 Score: 709/1000 (99.35%ile)</li>
                 <li>All India Rank 40 in CSIR JRF NET (Engineering Science) 2012</li>
             </ul>
         </div>
