@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif') no-repeat center center fixed;
+            background: url('https://media.istockphoto.com/id/1358653599/vector/brain-wave-3d.jpg?s=2048x2048&w=is&k=20&c=0o5pryJ1-Hyo0CLi1-jnGHusvSaMvCGUOUqmNS9zvyI=') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
         }
@@ -34,15 +34,46 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        .navbar a {
+        .navbar a, .dropdown-btn {
             color: white;
             padding: 15px 20px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             transition: background 0.3s;
+            cursor: pointer;
         }
-        .navbar a:hover { background-color: #c70039; }
+        .navbar a:hover, .dropdown-btn:hover { background-color: #c70039; }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ff5733;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .timeline-item {
+            padding: 10px;
+            background: #fff;
+            color: #000;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
         .content { display: none; }
         .active { display: block; }
         @media (max-width: 768px) {
@@ -61,13 +92,16 @@
     <div class="navbar">
         <a href="#" onclick="showSection('education')">Education</a>
         <a href="#" onclick="showSection('experience')">Experience</a>
-        <a href="#" onclick="showSection('research')">Research</a>
-        <a href="#" onclick="showSection('skills')">Skills</a>
-        <a href="#" onclick="showSection('publications')">Publications</a>
-        <a href="#" onclick="showSection('patents')">Patents</a>
-        <a href="#" onclick="showSection('awards')">Awards</a>
+        <div class="dropdown">
+            <button class="dropdown-btn">Research</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSection('publications')">Publications</a>
+                <a href="#" onclick="showSection('patents')">Patents</a>
+                <a href="#" onclick="showSection('awards')">Awards</a>
+                <a href="#" onclick="showSection('achievements')">Achievements</a>
+            </div>
+        </div>
         <a href="#" onclick="showSection('teaching')">Teaching</a>
-        <a href="#" onclick="showSection('achievements')">Achievements</a>
     </div>
     
     <div class="container">
@@ -75,57 +109,48 @@
             <h1>Dr. Rathin K. Joshi</h1>
             <p>Postdoctoral Research Associate, IISc Bangalore</p>
             <p>Email: <a href="mailto:rathin.joshi@gmail.com">rathin.joshi@gmail.com</a></p>
-            <p><a href="https://bit.ly/3ZI6y9h" target="_blank">Google Scholar</a> | <a href="https://linkedin.com/in/rathin-joshi" target="_blank">LinkedIn</a></p>
         </header>
         
         <div id="education" class="content active section">
             <h2>Education</h2>
-            <ul>
-                <li>Ph.D. in Electronic Systems Engineering, IISc Bangalore (2018-2024) - Thesis: Event-Related Potential Interpretation</li>
-                <li>M.Tech. in VLSI & Embedded Systems, DAIICT Gandhinagar (2013-2015)</li>
-                <li>B.E. in Electronics & Communication, Government Engineering College, Bhavnagar (2008-2012)</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-item">Ph.D. in Electronic Systems Engineering, IISc Bangalore (2018-2024)</div>
+                <div class="timeline-item">M.Tech. in VLSI & Embedded Systems, DAIICT Gandhinagar (2013-2015)</div>
+                <div class="timeline-item">B.E. in Electronics & Communication, Government Engineering College, Bhavnagar (2008-2012)</div>
+            </div>
         </div>
         
         <div id="experience" class="content section">
             <h2>Work Experience</h2>
-            <ul>
-                <li>Postdoctoral Research Associate, IISc Bangalore (Jan 2024 - Present)</li>
-                <li>System Engineer, Tata Consultancy Services (Aug 2015 - Dec 2017) - Worked on embedded modular system design.</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-item">Postdoctoral Research Associate, IISc Bangalore (Jan 2024 - Present)</div>
+                <div class="timeline-item">System Engineer, Tata Consultancy Services (Aug 2015 - Dec 2017)</div>
+            </div>
         </div>
         
         <div id="publications" class="content section">
             <h2>Publications</h2>
-            <ul>
-                <li>Spatiotemporal Analysis of Interictal EEG - <a href="#" target="_blank">Read More</a></li>
-                <li>Automated ABR and MMN Extraction - <a href="#" target="_blank">Read More</a></li>
-            </ul>
+            <p>Details about various research publications.</p>
+        </div>
+        
+        <div id="patents" class="content section">
+            <h2>Patents</h2>
+            <p>List of patents filed and granted.</p>
         </div>
         
         <div id="awards" class="content section">
             <h2>Awards & Recognitions</h2>
-            <ul>
-                <li>SITARE-GYTI appreciation for neonatal hearing screening research</li>
-                <li>Winner of SHIFT Health Hackathon</li>
-            </ul>
-        </div>
-        
-        <div id="teaching" class="content section">
-            <h2>Teaching Experience</h2>
-            <ul>
-                <li>TA for Design for Analog Circuits, IISc Bangalore</li>
-                <li>TA for Process Technology and System Engineering</li>
-            </ul>
+            <p>Details about received awards.</p>
         </div>
         
         <div id="achievements" class="content section">
             <h2>Achievements</h2>
-            <ul>
-                <li>Represented college in intercollegiate chess competitions</li>
-                <li>GATE 2013 Score: 709/1000 (99.35%ile)</li>
-                <li>All India Rank 40 in CSIR JRF NET (Engineering Science) 2012</li>
-            </ul>
+            <p>Significant career milestones.</p>
+        </div>
+        
+        <div id="teaching" class="content section">
+            <h2>Teaching Experience</h2>
+            <p>Details about courses taught and teaching responsibilities.</p>
         </div>
     </div>
 </body>
