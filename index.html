@@ -11,6 +11,11 @@
             padding: 0;
             background: #f4f4f4;
             color: #000;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #121212;
+            color: #fff;
         }
         .container {
             max-width: 1000px;
@@ -19,24 +24,47 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode .container {
+            background: #222;
         }
         h1, h2 { color: #333; }
+        .dark-mode h1, .dark-mode h2 { color: #ffcc00; }
         .navbar {
             background-color: #333;
             padding: 10px;
             text-align: center;
+            display: flex;
+            justify-content: space-around;
         }
         .navbar a {
             color: white;
             padding: 10px 15px;
             text-decoration: none;
-            display: inline-block;
         }
         .navbar a:hover { background-color: #575757; }
+        .dark-mode .navbar { background-color: #222; }
         .section { margin-bottom: 20px; }
+        .dark-mode-toggle {
+            background: #ffcc00;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+        }
     </style>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 <body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     <div class="navbar">
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
