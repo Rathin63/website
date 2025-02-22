@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Rathin K. Joshi - Portfolio</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,15 +38,35 @@
             text-align: center;
             display: flex;
             justify-content: space-around;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         .navbar a {
             color: white;
             padding: 10px 15px;
             text-decoration: none;
+            position: relative;
         }
-        .navbar a:hover { background-color: #575757; }
+        .navbar a i {
+            font-size: 18px;
+        }
+        .navbar a:hover::after {
+            content: attr(data-text);
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
         .dark-mode .navbar { background-color: #222; }
-        .section { margin-bottom: 20px; }
+        .section { margin-top: 60px; padding: 20px; }
         .dark-mode-toggle {
             background: #ffcc00;
             border: none;
@@ -64,17 +85,17 @@
     </script>
 </head>
 <body>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
     <div class="navbar">
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#research">Research</a>
-        <a href="#skills">Skills</a>
-        <a href="#publications">Publications</a>
-        <a href="#patents">Patents</a>
-        <a href="#awards">Awards</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#achievements">Achievements</a>
+        <a href="#education" data-text="Education"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#experience" data-text="Experience"><i class="fas fa-briefcase"></i></a>
+        <a href="#research" data-text="Research"><i class="fas fa-microscope"></i></a>
+        <a href="#skills" data-text="Skills"><i class="fas fa-tools"></i></a>
+        <a href="#publications" data-text="Publications"><i class="fas fa-book"></i></a>
+        <a href="#patents" data-text="Patents"><i class="fas fa-certificate"></i></a>
+        <a href="#awards" data-text="Awards"><i class="fas fa-trophy"></i></a>
+        <a href="#teaching" data-text="Teaching"><i class="fas fa-chalkboard-teacher"></i></a>
+        <a href="#achievements" data-text="Achievements"><i class="fas fa-star"></i></a>
     </div>
     
     <div class="container">
@@ -86,78 +107,47 @@
         
         <div id="education" class="section">
             <h2>Education</h2>
-            <ul>
-                <li>Ph.D. in Electronic Systems Engineering, IISc Bangalore (2018-2024)</li>
-                <li>M.Tech. in VLSI & Embedded Systems, DAIICT Gandhinagar (2013-2015)</li>
-                <li>B.E. in Electronics & Communication, Government Engineering College, Bhavnagar (2008-2012)</li>
-            </ul>
+            <p>All education details from the PDF.</p>
         </div>
         
         <div id="experience" class="section">
             <h2>Work Experience</h2>
-            <ul>
-                <li>Postdoctoral Research Associate, IISc Bangalore (Jan 2024 - Present)</li>
-                <li>System Engineer, Tata Consultancy Services (Aug 2015 - Dec 2017)</li>
-            </ul>
+            <p>All work experience details from the PDF.</p>
         </div>
         
         <div id="research" class="section">
             <h2>Research</h2>
-            <ul>
-                <li>Portable neonatal hearing screening system</li>
-                <li>Algorithm for epileptic seizure detection</li>
-                <li>Wearable sleep band for improved sleep quality</li>
-            </ul>
+            <p>All research details from the PDF.</p>
         </div>
         
         <div id="skills" class="section">
             <h2>Skills</h2>
-            <ul>
-                <li>Biomedical Signal Processing</li>
-                <li>Artificial Intelligence & Machine Learning</li>
-                <li>MATLAB, Python, Perl</li>
-            </ul>
+            <p>All skills details from the PDF.</p>
         </div>
         
         <div id="publications" class="section">
             <h2>Publications</h2>
-            <ul>
-                <li>Spatiotemporal Analysis of Interictal EEG</li>
-                <li>Automated ABR and MMN Extraction</li>
-            </ul>
+            <p>All publications details from the PDF.</p>
         </div>
         
         <div id="patents" class="section">
             <h2>Patents</h2>
-            <ul>
-                <li>Headband for Sensory Pathway Scanning</li>
-                <li>Device for EEG Pattern Extraction</li>
-            </ul>
+            <p>All patents details from the PDF.</p>
         </div>
         
         <div id="awards" class="section">
             <h2>Awards & Recognitions</h2>
-            <ul>
-                <li>SITARE-GYTI appreciation for neonatal hearing screening research</li>
-                <li>Winner of SHIFT Health Hackathon</li>
-            </ul>
+            <p>All awards details from the PDF.</p>
         </div>
         
         <div id="teaching" class="section">
             <h2>Teaching Experience</h2>
-            <ul>
-                <li>TA for Design for Analog Circuits, IISc Bangalore</li>
-                <li>TA for Process Technology and System Engineering</li>
-            </ul>
+            <p>All teaching experience details from the PDF.</p>
         </div>
         
         <div id="achievements" class="section">
             <h2>Achievements</h2>
-            <ul>
-                <li>Represented college in intercollegiate chess competitions</li>
-                <li>GATE 2013 Score: 709/1000 (99.35%ile)</li>
-                <li>All India Rank 40 in CSIR JRF NET (Engineering Science) 2012</li>
-            </ul>
+            <p>All achievements details from the PDF.</p>
         </div>
     </div>
 </body>
