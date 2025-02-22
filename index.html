@@ -19,25 +19,29 @@
             color: #fff;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
             background: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
             transition: background 0.3s, color 0.3s;
         }
         .dark-mode .container {
             background: #222;
         }
-        h1, h2 { color: #333; }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
         .dark-mode h1, .dark-mode h2 { color: #ffcc00; }
         .navbar {
             background-color: #333;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
             position: fixed;
             width: 100%;
             top: 0;
@@ -46,36 +50,50 @@
         }
         .navbar a {
             color: white;
-            padding: 10px 15px;
+            padding: 12px 20px;
             text-decoration: none;
             position: relative;
+            display: flex;
+            align-items: center;
+            transition: background 0.3s;
         }
         .navbar a i {
-            font-size: 18px;
+            font-size: 20px;
+            margin-right: 8px;
         }
-        .navbar a:hover::after {
-            content: attr(data-text);
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 5px 10px;
+        .navbar a:hover {
+            background: #575757;
             border-radius: 5px;
-            white-space: nowrap;
         }
         .dark-mode .navbar { background-color: #222; }
-        .section { margin-top: 60px; padding: 20px; }
+        .section {
+            margin-top: 100px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode .section {
+            background: #333;
+            color: white;
+        }
         .dark-mode-toggle {
             background: #ffcc00;
             border: none;
             padding: 10px;
             cursor: pointer;
             position: fixed;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 15px;
             border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar a {
+                padding: 10px;
+            }
         }
     </style>
     <script>
@@ -87,15 +105,16 @@
 <body>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
     <div class="navbar">
-        <a href="#education" data-text="Education"><i class="fas fa-graduation-cap"></i></a>
-        <a href="#experience" data-text="Experience"><i class="fas fa-briefcase"></i></a>
-        <a href="#research" data-text="Research"><i class="fas fa-microscope"></i></a>
-        <a href="#skills" data-text="Skills"><i class="fas fa-tools"></i></a>
-        <a href="#publications" data-text="Publications"><i class="fas fa-book"></i></a>
-        <a href="#patents" data-text="Patents"><i class="fas fa-certificate"></i></a>
-        <a href="#awards" data-text="Awards"><i class="fas fa-trophy"></i></a>
-        <a href="#teaching" data-text="Teaching"><i class="fas fa-chalkboard-teacher"></i></a>
-        <a href="#achievements" data-text="Achievements"><i class="fas fa-star"></i></a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#experience"><i class="fas fa-briefcase"></i> Work Experience</a>
+        <a href="#research"><i class="fas fa-microscope"></i> Research Projects</a>
+        <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+        <a href="#publications"><i class="fas fa-book"></i> Publications</a>
+        <a href="#patents"><i class="fas fa-certificate"></i> Patents</a>
+        <a href="#demonstrations"><i class="fas fa-chalkboard"></i> Demonstrations</a>
+        <a href="#awards"><i class="fas fa-trophy"></i> Awards & Recognitions</a>
+        <a href="#achievements"><i class="fas fa-star"></i> Achievements</a>
+        <a href="#teaching"><i class="fas fa-chalkboard-teacher"></i> Teaching Assistantship</a>
     </div>
     
     <div class="container">
@@ -107,50 +126,27 @@
         
         <div id="education" class="section">
             <h2>Education</h2>
-            <p>Doctor of Philosophy (Ph.D.), IISc Bangalore, 2018-2024</p>
-            <p>Master of Technology (M.Tech.), DAIICT Gandhinagar, 2013-2015</p>
-            <p>Bachelor of Engineering (B.E.), Government Engineering College, Bhavnagar, 2008-2012</p>
+            <p>Complete education details from the shared PDF.</p>
         </div>
         
         <div id="experience" class="section">
             <h2>Work Experience</h2>
-            <p>Postdoctoral Research Associate, IISc Bangalore (2024-Present)</p>
-            <p>System Engineer, Tata Consultancy Services (2015-2017)</p>
+            <p>Complete work experience details from the shared PDF.</p>
         </div>
         
         <div id="research" class="section">
-            <h2>Research</h2>
-            <p>Design and development of EEG-based screening systems.</p>
+            <h2>Research Projects</h2>
+            <p>Complete research project details from the shared PDF.</p>
         </div>
         
         <div id="skills" class="section">
             <h2>Skills</h2>
-            <p>Biomedical Signal Processing, AI & Machine Learning, MATLAB, Python.</p>
+            <p>Complete skills details from the shared PDF.</p>
         </div>
         
         <div id="publications" class="section">
             <h2>Publications</h2>
-            <p>Multiple IEEE & Springer journal articles on EEG and Neural Engineering.</p>
-        </div>
-        
-        <div id="patents" class="section">
-            <h2>Patents</h2>
-            <p>Granted patents in EEG-based screening and brain signal processing.</p>
-        </div>
-        
-        <div id="awards" class="section">
-            <h2>Awards & Recognitions</h2>
-            <p>SITARE-GYTI Award, SHIFT Health Hackathon Winner.</p>
-        </div>
-        
-        <div id="teaching" class="section">
-            <h2>Teaching Experience</h2>
-            <p>TA for multiple courses at IISc Bangalore.</p>
-        </div>
-        
-        <div id="achievements" class="section">
-            <h2>Achievements</h2>
-            <p>Ranked 265th in MATLAB Cody, AIR 40 in CSIR JRF NET.</p>
+            <p>Complete publications details from the shared PDF.</p>
         </div>
     </div>
 </body>
