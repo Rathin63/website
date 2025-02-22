@@ -5,16 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Rathin K. Joshi - Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f4f4f4; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
         h1, h2 { color: #333; }
-        .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
         .section { margin-bottom: 20px; }
         ul { padding-left: 20px; }
         a { color: #007bff; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .navbar { background-color: #007bff; padding: 10px; text-align: center; }
+        .navbar a { color: white; padding: 10px 20px; text-decoration: none; display: inline-block; }
+        .navbar a:hover { background-color: #0056b3; }
+        .content { display: none; }
+        .active { display: block; }
     </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#" onclick="showSection('education')">Education</a>
+        <a href="#" onclick="showSection('experience')">Experience</a>
+        <a href="#" onclick="showSection('research')">Research</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('patents')">Patents</a>
+        <a href="#" onclick="showSection('publications')">Publications</a>
+        <a href="#" onclick="showSection('awards')">Awards</a>
+        <a href="#" onclick="showSection('achievements')">Achievements</a>
+    </div>
+    
     <div class="container">
         <header>
             <h1>Dr. Rathin K. Joshi</h1>
@@ -23,7 +45,7 @@
             <p><a href="https://bit.ly/3ZI6y9h" target="_blank">Google Scholar</a> | <a href="https://linkedin.com/in/rathin-joshi" target="_blank">LinkedIn</a></p>
         </header>
         
-        <div class="section">
+        <div id="education" class="content active section">
             <h2>Education</h2>
             <ul>
                 <li>Ph.D. in Electronic Systems Engineering, IISc Bangalore (2018-2024)</li>
@@ -32,7 +54,7 @@
             </ul>
         </div>
         
-        <div class="section">
+        <div id="experience" class="content section">
             <h2>Work Experience</h2>
             <ul>
                 <li>Postdoctoral Research Associate, IISc Bangalore (Jan 2024 - Present)</li>
@@ -40,7 +62,7 @@
             </ul>
         </div>
         
-        <div class="section">
+        <div id="research" class="content section">
             <h2>Research Projects</h2>
             <ul>
                 <li>Portable neonatal hearing screening system</li>
@@ -49,31 +71,44 @@
             </ul>
         </div>
         
-        <div class="section">
+        <div id="skills" class="content section">
             <h2>Skills</h2>
             <ul>
                 <li>Biomedical Signal Processing</li>
                 <li>Artificial Intelligence & Machine Learning</li>
                 <li>MATLAB, Python, Perl</li>
-                <li>Biomedical Electronic System Design</li>
-                <li>Neural System Development and Validation</li>
-                <li>Wearable Brain-Computer Interface Design</li>
             </ul>
         </div>
         
-        <div class="section">
+        <div id="patents" class="content section">
             <h2>Patents</h2>
             <ul>
                 <li>Headband for Sensory Pathway Scanning</li>
                 <li>Device for EEG Pattern Extraction</li>
-                <li>Surface Neural Implant for Brain Stimulation</li>
-                <li>Neonatal Headgear for Biological Interface</li>
             </ul>
         </div>
         
-        <div class="section">
+        <div id="publications" class="content section">
             <h2>Publications</h2>
             <p>See full list on <a href="https://bit.ly/3ZI6y9h" target="_blank">Google Scholar</a>.</p>
+        </div>
+        
+        <div id="awards" class="content section">
+            <h2>Awards & Recognitions</h2>
+            <ul>
+                <li>SITARE-GYTI appreciation for neonatal hearing screening research</li>
+                <li>Winner of SHIFT Health Hackathon for affordable neonatal deafness screener</li>
+            </ul>
+        </div>
+        
+        <div id="achievements" class="content section">
+            <h2>Other Achievements</h2>
+            <ul>
+                <li>Represented college in intercollegiate chess competitions</li>
+                <li>265th rank in MATLAB Cody (out of 123,000 active members)</li>
+                <li>GATE 2013 Score: 709/1000 (AIR 1667 - 99.35%ile)</li>
+                <li>All India Rank 40 in CSIR JRF NET (Engineering Science) 2012</li>
+            </ul>
         </div>
     </div>
 </body>
