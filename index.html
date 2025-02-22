@@ -9,99 +9,44 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://media.istockphoto.com/id/1358653599/vector/brain-wave-3d.jpg?s=2048x2048&w=is&k=20&c=0o5pryJ1-Hyo0CLi1-jnGHusvSaMvCGUOUqmNS9zvyI=') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
+            background: #f4f4f4;
+            color: #000;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: auto;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 { color: #ffcc00; }
-        .section { margin-bottom: 20px; }
-        ul { padding-left: 20px; }
-        a { color: #ffcc00; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        h1, h2 { color: #333; }
         .navbar {
-            background-color: #ff5733;
-            padding: 15px;
+            background-color: #333;
+            padding: 10px;
             text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
         }
-        .navbar a, .dropdown-btn {
+        .navbar a {
             color: white;
-            padding: 15px 20px;
+            padding: 10px 15px;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-        .navbar a:hover, .dropdown-btn:hover { background-color: #c70039; }
-        .dropdown {
-            position: relative;
             display: inline-block;
         }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ff5733;
-            min-width: 160px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            display: block;
-            text-align: left;
-        }
-        .dropdown:hover .dropdown-content { display: block; }
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 20px auto;
-        }
-        .timeline-item {
-            padding: 10px;
-            background: #fff;
-            color: #000;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        .content { display: none; }
-        .active { display: block; }
-        @media (max-width: 768px) {
-            .navbar { flex-direction: column; }
-            .container { width: 95%; }
-        }
+        .navbar a:hover { background-color: #575757; }
+        .section { margin-bottom: 20px; }
     </style>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content').forEach(sec => sec.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
 </head>
 <body>
     <div class="navbar">
-        <a href="#" onclick="showSection('education')">Education</a>
-        <a href="#" onclick="showSection('experience')">Experience</a>
-        <div class="dropdown">
-            <button class="dropdown-btn">Research</button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showSection('publications')">Publications</a>
-                <a href="#" onclick="showSection('patents')">Patents</a>
-                <a href="#" onclick="showSection('awards')">Awards</a>
-                <a href="#" onclick="showSection('achievements')">Achievements</a>
-            </div>
-        </div>
-        <a href="#" onclick="showSection('teaching')">Teaching</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
+        <a href="#patents">Patents</a>
+        <a href="#awards">Awards</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#achievements">Achievements</a>
     </div>
     
     <div class="container">
@@ -111,46 +56,80 @@
             <p>Email: <a href="mailto:rathin.joshi@gmail.com">rathin.joshi@gmail.com</a></p>
         </header>
         
-        <div id="education" class="content active section">
+        <div id="education" class="section">
             <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">Ph.D. in Electronic Systems Engineering, IISc Bangalore (2018-2024)</div>
-                <div class="timeline-item">M.Tech. in VLSI & Embedded Systems, DAIICT Gandhinagar (2013-2015)</div>
-                <div class="timeline-item">B.E. in Electronics & Communication, Government Engineering College, Bhavnagar (2008-2012)</div>
-            </div>
+            <ul>
+                <li>Ph.D. in Electronic Systems Engineering, IISc Bangalore (2018-2024)</li>
+                <li>M.Tech. in VLSI & Embedded Systems, DAIICT Gandhinagar (2013-2015)</li>
+                <li>B.E. in Electronics & Communication, Government Engineering College, Bhavnagar (2008-2012)</li>
+            </ul>
         </div>
         
-        <div id="experience" class="content section">
+        <div id="experience" class="section">
             <h2>Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">Postdoctoral Research Associate, IISc Bangalore (Jan 2024 - Present)</div>
-                <div class="timeline-item">System Engineer, Tata Consultancy Services (Aug 2015 - Dec 2017)</div>
-            </div>
+            <ul>
+                <li>Postdoctoral Research Associate, IISc Bangalore (Jan 2024 - Present)</li>
+                <li>System Engineer, Tata Consultancy Services (Aug 2015 - Dec 2017)</li>
+            </ul>
         </div>
         
-        <div id="publications" class="content section">
+        <div id="research" class="section">
+            <h2>Research</h2>
+            <ul>
+                <li>Portable neonatal hearing screening system</li>
+                <li>Algorithm for epileptic seizure detection</li>
+                <li>Wearable sleep band for improved sleep quality</li>
+            </ul>
+        </div>
+        
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Biomedical Signal Processing</li>
+                <li>Artificial Intelligence & Machine Learning</li>
+                <li>MATLAB, Python, Perl</li>
+            </ul>
+        </div>
+        
+        <div id="publications" class="section">
             <h2>Publications</h2>
-            <p>Details about various research publications.</p>
+            <ul>
+                <li>Spatiotemporal Analysis of Interictal EEG</li>
+                <li>Automated ABR and MMN Extraction</li>
+            </ul>
         </div>
         
-        <div id="patents" class="content section">
+        <div id="patents" class="section">
             <h2>Patents</h2>
-            <p>List of patents filed and granted.</p>
+            <ul>
+                <li>Headband for Sensory Pathway Scanning</li>
+                <li>Device for EEG Pattern Extraction</li>
+            </ul>
         </div>
         
-        <div id="awards" class="content section">
+        <div id="awards" class="section">
             <h2>Awards & Recognitions</h2>
-            <p>Details about received awards.</p>
+            <ul>
+                <li>SITARE-GYTI appreciation for neonatal hearing screening research</li>
+                <li>Winner of SHIFT Health Hackathon</li>
+            </ul>
         </div>
         
-        <div id="achievements" class="content section">
-            <h2>Achievements</h2>
-            <p>Significant career milestones.</p>
-        </div>
-        
-        <div id="teaching" class="content section">
+        <div id="teaching" class="section">
             <h2>Teaching Experience</h2>
-            <p>Details about courses taught and teaching responsibilities.</p>
+            <ul>
+                <li>TA for Design for Analog Circuits, IISc Bangalore</li>
+                <li>TA for Process Technology and System Engineering</li>
+            </ul>
+        </div>
+        
+        <div id="achievements" class="section">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Represented college in intercollegiate chess competitions</li>
+                <li>GATE 2013 Score: 709/1000 (99.35%ile)</li>
+                <li>All India Rank 40 in CSIR JRF NET (Engineering Science) 2012</li>
+            </ul>
         </div>
     </div>
 </body>
