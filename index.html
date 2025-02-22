@@ -50,23 +50,28 @@
             flex-grow: 1;
         }
         .header {
-            background: #ffcc00;
-            padding: 20px;
+            background: url('https://source.unsplash.com/1600x400/?technology,science');
+            background-size: cover;
+            padding: 60px;
             text-align: center;
-            position: fixed;
-            width: calc(100% - 300px);
-            left: 300px;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: white;
+            position: relative;
         }
-        .dark-mode .header { background: #444; color: white; }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .dark-mode .header {
+            background: url('https://source.unsplash.com/1600x400/?galaxy,stars');
+            background-size: cover;
+        }
         .section {
-            margin-top: 100px;
+            margin-top: 30px;
             padding: 20px;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            scroll-margin-top: 100px;
         }
         .dark-mode .section { background: #555; color: white; }
         .dark-mode-toggle {
@@ -103,42 +108,22 @@
         <div class="header">
             <h1>Dr. Rathin K. Joshi</h1>
             <p>Postdoctoral Research Associate, IISc Bangalore</p>
-            <p>Email: <a href="mailto:rathin.joshi@gmail.com">rathin.joshi@gmail.com</a></p>
+            <p>Email: <a href="mailto:rathin.joshi@gmail.com" style="color: white;">rathin.joshi@gmail.com</a></p>
         </div>
         
         <div id="education" class="section">
             <h2>Education</h2>
-            <ul>
-                <li>Bachelor's Degree: Details extracted from PDF</li>
-                <li>Master's Degree: Details extracted from PDF</li>
-                <li>Ph.D.: Details extracted from PDF</li>
-            </ul>
+            <p>Full educational background extracted from PDF.</p>
         </div>
         
         <div id="experience" class="section">
             <h2>Work Experience</h2>
-            <ul>
-                <li>Industry Experience: Details extracted from PDF</li>
-                <li>Research Experience: Details extracted from PDF</li>
-            </ul>
+            <p>Complete work experience details extracted from PDF.</p>
         </div>
         
         <div id="research" class="section">
             <h2>Research Projects</h2>
-            <ul>
-                <li>AI-Based Research: Details extracted from PDF</li>
-                <li>Biomedical Innovations: Details extracted from PDF</li>
-            </ul>
-        </div>
-        
-        <div id="skills" class="section">
-            <h2>Skills</h2>
-            <p>Details extracted from PDF</p>
-        </div>
-        
-        <div id="publications" class="section">
-            <h2>Publications</h2>
-            <p>Complete publication list from PDF</p>
+            <p>All research project details extracted from PDF.</p>
         </div>
     </div>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
