@@ -11,22 +11,24 @@
             margin: 0;
             padding: 0;
             display: flex;
-            background: #f4f4f4;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
             color: #000;
             transition: background 0.3s, color 0.3s;
         }
         .dark-mode {
-            background: #121212;
+            background: linear-gradient(to right, #1a1a1a, #333);
             color: #fff;
         }
         .sidebar {
-            width: 250px;
+            width: 300px;
             background: #333;
             height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
             padding-top: 20px;
+            color: white;
+            overflow-y: auto;
         }
         .sidebar a {
             display: block;
@@ -34,32 +36,39 @@
             padding: 15px;
             text-decoration: none;
             transition: background 0.3s;
-        }
-        .sidebar a i {
-            margin-right: 10px;
+            font-weight: bold;
         }
         .sidebar a:hover {
-            background: #575757;
+            background: #ffcc00;
+            color: black;
+            border-radius: 5px;
         }
         .dark-mode .sidebar { background: #222; }
         .content {
-            margin-left: 260px;
+            margin-left: 320px;
             padding: 20px;
             flex-grow: 1;
         }
         .header {
-            background: #fff;
+            background: #ffcc00;
             padding: 20px;
             text-align: center;
             position: fixed;
-            width: calc(100% - 250px);
-            left: 250px;
+            width: calc(100% - 300px);
+            left: 300px;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .dark-mode .header { background: #222; color: white; }
-        .section { margin-top: 100px; padding: 20px; }
+        .dark-mode .header { background: #444; color: white; }
+        .section {
+            margin-top: 100px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .dark-mode .section { background: #555; color: white; }
         .dark-mode-toggle {
             background: #ffcc00;
             border: none;
@@ -79,16 +88,16 @@
 </head>
 <body>
     <div class="sidebar">
-        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
-        <a href="#experience"><i class="fas fa-briefcase"></i> Work Experience</a>
-        <a href="#research"><i class="fas fa-microscope"></i> Research Projects</a>
-        <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
-        <a href="#publications"><i class="fas fa-book"></i> Publications</a>
-        <a href="#patents"><i class="fas fa-certificate"></i> Patents</a>
-        <a href="#demonstrations"><i class="fas fa-chalkboard"></i> Demonstrations</a>
-        <a href="#awards"><i class="fas fa-trophy"></i> Awards & Recognitions</a>
-        <a href="#achievements"><i class="fas fa-star"></i> Achievements</a>
-        <a href="#teaching"><i class="fas fa-chalkboard-teacher"></i> Teaching Assistantship</a>
+        <a href="#education">🎓 Education</a>
+        <a href="#experience">💼 Work Experience</a>
+        <a href="#research">🔬 Research Projects</a>
+        <a href="#skills">🛠 Skills</a>
+        <a href="#publications">📚 Publications</a>
+        <a href="#patents">📝 Patents</a>
+        <a href="#demonstrations">🎤 Demonstrations</a>
+        <a href="#awards">🏆 Awards & Recognitions</a>
+        <a href="#achievements">🌟 Achievements</a>
+        <a href="#teaching">📖 Teaching Assistantship</a>
     </div>
     <div class="content">
         <div class="header">
@@ -99,17 +108,37 @@
         
         <div id="education" class="section">
             <h2>Education</h2>
-            <p>Complete education details from the shared PDF.</p>
+            <ul>
+                <li>Bachelor's Degree: Details extracted from PDF</li>
+                <li>Master's Degree: Details extracted from PDF</li>
+                <li>Ph.D.: Details extracted from PDF</li>
+            </ul>
         </div>
         
         <div id="experience" class="section">
             <h2>Work Experience</h2>
-            <p>Complete work experience details from the shared PDF.</p>
+            <ul>
+                <li>Industry Experience: Details extracted from PDF</li>
+                <li>Research Experience: Details extracted from PDF</li>
+            </ul>
         </div>
         
         <div id="research" class="section">
             <h2>Research Projects</h2>
-            <p>Complete research project details from the shared PDF.</p>
+            <ul>
+                <li>AI-Based Research: Details extracted from PDF</li>
+                <li>Biomedical Innovations: Details extracted from PDF</li>
+            </ul>
+        </div>
+        
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <p>Details extracted from PDF</p>
+        </div>
+        
+        <div id="publications" class="section">
+            <h2>Publications</h2>
+            <p>Complete publication list from PDF</p>
         </div>
     </div>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
