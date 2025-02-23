@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Rathin K. Joshi - Portfolio</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,18 +22,18 @@
         }
         .sidebar {
             width: 300px;
-            background: #000;
+            background: #fff;
             height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
             padding-top: 20px;
-            color: white;
+            color: #000;
             overflow-y: auto;
         }
         .sidebar a {
             display: block;
-            color: white;
+            color: #000;
             padding: 15px;
             text-decoration: none;
             transition: background 0.3s;
@@ -43,7 +44,8 @@
             color: black;
             border-radius: 5px;
         }
-        .dark-mode .sidebar { background: #222; }
+        .dark-mode .sidebar { background: #222;}
+        .dark-mode .sidebar a { color: #fff; }  
         .content {
             margin-left: 320px;
             padding: 20px;
@@ -84,26 +86,32 @@
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             document.body.classList.add('dark-mode');
-            document.querySelector('.dark-mode-toggle').textContent = 'Light Mode';
+            document.querySelector('.dark-mode-toggle i').classList.replace('fa-moon', 'fa-sun');
         });
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
-            document.querySelector('.dark-mode-toggle').textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+            const icon = document.querySelector('.dark-mode-toggle i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.replace('fa-moon-o', 'fa-sun-o');
+            } else {
+                icon.classList.replace('fa-sun-o', 'fa-moon-o');
+            }
         }
     </script>
 </head>
 <body>
+
     <div class="sidebar">
-        <a href="#education">🎓 Education</a>
-        <a href="#experience">💼 Work Experience</a>
-        <a href="#research">🔬 Research Projects</a>
-        <a href="#skills">🛠 Skills</a>
-        <a href="#publications">📚 Publications</a>
-        <a href="#patents">📝 Patents</a>
-        <a href="#demonstrations">🎤 Demonstrations</a>
-        <a href="#awards">🏆 Awards & Recognitions</a>
-        <a href="#achievements">🌟 Achievements</a>
-        <a href="#teaching">📖 Teaching Assistantship</a>
+        <a href="#education"><i class="fa fa-graduation-cap"></i> Education</a>
+        <a href="#experience"><i class="fa fa-briefcase"></i> Work Experience</a>
+        <a href="#research"><i class="fa fa-flask"></i> Research Projects</a>
+        <a href="#skills"><i class="fa fa-cogs"></i> Skills</a>
+        <a href="#publications"><i class="fa fa-book"></i> Publications</a>
+        <a href="#patents"><i class="fa fa-file-text"></i> Patents</a>
+        <a href="#demonstrations"><i class="fa fa-heartbeat"></i> Demonstrations</a>
+        <a href="#awards"><i class="fa fa-trophy"></i> Awards & Recognitions</a>
+        <a href="#achievements"><i class="fa fa-star"></i> Achievements</a>
+        <a href="#teaching"><i class="fa fa-line-chart"></i> Teaching Assistantship</a>
     </div>
     <div class="content">
         <div class="header">
@@ -137,6 +145,8 @@
             <p>Peer-reviewed journal and conference papers in IEEE, BioCAS, and more.</p>
         </div>
     </div>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <i class="fa fa-sun-o"></i>
+    </button>
 </body>
 </html>
