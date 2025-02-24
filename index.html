@@ -70,6 +70,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             scroll-margin-top: 100px;
+            color: black;
         }
         .dark-mode .section { background: #555; color: white; }
         .dark-mode-toggle {
@@ -82,6 +83,17 @@
             right: 15px;
             border-radius: 5px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            line-height:175% 
+        }   
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -122,12 +134,100 @@
         
         <div id="education" class="section">
             <h2>Education</h2>
-            <p>academic details including Bachelor's, Master's, and Ph.D.</p>
+            <table>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Department/Specialization</th>
+                    <th>Institution</th>
+                    <th>Score</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>Doctor of Philosophy (Ph.D.)</td>
+                    <td>Electronic Systems Engineering (DESE), Division of EECS</td>
+                    <td>Indian Institute of Science (IISc), Bangalore</td>
+                    <td>7.9/10</td>
+                    <td>2018-2024</td>
+                </tr>
+                <tr>
+                    <td colspan="5"><b>Thesis Title:</b> Event-Related Potential Interpretation Approaches for Neonatal Hearing Screening</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Broader Area:</b> Brain Computer Interfaces </td>   <td colspan="3"><b>Thesis Defense Date:</b> 22 April 2024</td> 
+                </tr>
+                <tr>
+                    <td>Master of Technology (M.Tech.)</td>
+                    <td>VLSI and Embedded Systems</td>
+                    <td>Dhirubhai Ambani Institute of Information and Communication Technology, Gandhinagar</td>
+                    <td>7.55/10</td>
+                    <td>2013-2015</td>
+                </tr>
+                <tr>
+                    <td>Bachelor of Engineering (B.E.)</td>
+                    <td>Electronics and Communication</td>
+                    <td>Government Engineering College, Bhavnagar</td>
+                    <td>7.99/10</td>
+                    <td>2008-2012</td>
+                </tr>
+                <tr>
+                    <td>Higher Secondary Education (12th Std)</td>
+                    <td>Science Stream – Engineering Group</td>
+                    <td>B. M. Commerce High School, Bhavnagar</td>
+                    <td>82.20%</td>
+                    <td>2008</td>
+                </tr>
+                <tr>
+                    <td>Secondary Education (10th Std)</td>
+                    <td>-</td>
+                    <td>B. M. Commerce High School, Bhavnagar</td>
+                    <td>90.14%</td>
+                    <td>2006</td>
+                </tr>
+            </table>
+        
         </div>
         
         <div id="experience" class="section">
             <h2>Work Experience</h2>
-            <p>Industry and research experience details.</p>
+            <table>
+                <tr>
+                    <th>Position</th>
+                    <th>Duration</th>
+                    <th>Workplace</th>
+                    <th>Contribution</th>
+                </tr>
+                <tr>
+                    <td>Post-Doctoral Research Associate</td>
+                    <td>1 Year 2 Months<br>(January 2024 – Present)</td>
+                    <td rowspan="2">BEES Lab <br> DESE <br> IISc</td>
+                    <td>
+                        • Technology Transfer for Doctoral Research<br>
+                        • Support for Neural Signal Processing for invasive rodent models<br>
+                        • Mentoring researchers, including doctoral and master students
+                    </td>
+                </tr>
+                <tr>
+                    <td>Teaching Assistant</td>
+                    <td>5 Years 8 Months<br>(July 2019 – Present)</td>
+                    <td>
+                        • Taught Brain-Computer Interfaces for nine online and three offline courses.<br>
+                        • Conducted weekly assignments lab sessions<br>
+                        • Managed Question Answer Forums<br>
+                        • Conducted Live sessions
+                    </td>
+                </tr>
+                <tr>
+                    <td>System Engineer</td>
+                    <td>2 Years 4 Months<br>(August 2015 – December 2017)</td>
+                    <td>TCS, Pune<br>Client: Ford Motor Company, Detroit</td>
+                    <td>
+                        • Contributed towards embedded modular system design and relevant logic development and verification.<br>
+                        • Supported model-based design using MATLAB.<br>
+                        • Worked on car safety and a power optimization module.<br>
+                        • Coordinated with the onsite testing team to update the existing logic.
+                    </td>
+                </tr>
+            </table>
         </div>
         
         <div id="research" class="section">
