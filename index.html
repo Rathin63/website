@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Rathin K. Joshi - Portfolio</title>
+    <title>Dr. Rathin K. Joshi </title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            background: linear-gradient(to right, #dad6d9, #d7cece);
+            background: linear-gradient(to right, #dad6d9 0%, #dad6d9  65%, #1a1919 100%);
             color: #000;
             transition: background 0.3s, color 0.3s;
         }
         .dark-mode {
-            background: linear-gradient(to right, #1a1a1a, #333);
+            background: linear-gradient(to right, #0d0d0d, #fefdfd);
             color: #fff;
+        }
+        .dark-mode th {
+            background-color: #ea1c1c;
+            color: white
         }
         .sidebar {
             width: 300px;
@@ -39,9 +43,14 @@
             transition: background 0.3s;
             font-weight: bold;
         }
-        .sidebar a:hover {
-            background: #ffcc00;
+        .dark-mode .sidebar a:hover {
+            background: #f40808;
             color: black;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background:rgb(173, 249, 173);
+            color: whitesmoke;
             border-radius: 5px;
         }
         .dark-mode .sidebar { background: #222;}
@@ -87,6 +96,8 @@
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            border-width: 20px;
+            border-color: white;
         }
         th, td {
             border: 1px solid #ddd;
@@ -94,19 +105,28 @@
             text-align: left;
             line-height:175% 
         }   
+        th  {
+            background-color: rgb(173, 249, 173);
+            color: rgb(7, 7, 7);
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             document.body.classList.add('dark-mode');
             document.querySelector('.dark-mode-toggle i').classList.replace('fa-moon', 'fa-sun');
+            document.head.style.th.background-color.replace('green','red');
         });
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
             const icon = document.querySelector('.dark-mode-toggle i');
+            /*const col=document.head.style.th;*/
             if (document.body.classList.contains('dark-mode')) {
                 icon.classList.replace('fa-moon-o', 'fa-sun-o');
+               
+                /*col = #222222;*/
             } else {
                 icon.classList.replace('fa-sun-o', 'fa-moon-o');
+                /*col = #dddddd;*/
             }
         }
     </script>
@@ -127,8 +147,8 @@
     </div>
     <div class="content">
         <div class="header">
-            <h1>Dr. Rathin K. Joshi</h1>
-            <p>Postdoctoral Research Associate, IISc Bangalore</p>
+            <h1> Rathin K. Joshi </h1>
+            <h2> Post-Doctoral Research Associate (IISc) </h2>
             <p>Email: <a href="mailto:rathin.joshi@gmail.com" style="color: white;">rathin.joshi@gmail.com</a></p>
         </div>
         
