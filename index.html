@@ -7,13 +7,20 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        :root {
+            --primary-color:#F5EDED;
+            --secondary-color:#E2DAD6;
+            --primary-bg-color:#6482AD;
+            --secondary-bg-color:#7FA1C3;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            background: linear-gradient(to right, #dad6d9 0%, #dad6d9  65%, #1a1919 100%);
-            color: #000;
+            background: linear-gradient(to right, var(--primary-bg-color), var(--secondary-bg-color));
+            color: var(--primary-color);
             transition: background 0.3s, color 0.3s;
         }
         .dark-mode {
@@ -26,18 +33,18 @@
         }
         .sidebar {
             width: 300px;
-            background: #fff;
+            background: var(--primary-bg-color);
             height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
             padding-top: 20px;
-            color: #000;
+            color: var(--primary-color);
             overflow-y: auto;
         }
         .sidebar a {
             display: block;
-            color: #000;
+            color:var(--primary-color);
             padding: 15px;
             text-decoration: none;
             transition: background 0.3s;
@@ -49,8 +56,8 @@
             border-radius: 5px;
         }
         .sidebar a:hover {
-            background:rgb(2, 60, 2);
-            color: whitesmoke;
+            background:var(--secondary-bg-color);
+            color: var(--secondary-color);
             border-radius: 5px;
         }
         .dark-mode .sidebar { background: #222;}
@@ -65,7 +72,7 @@
             background-size: cover;
             padding: 30px;
             text-align: center;
-            color: white;
+            color: var(--primary-color);
             position: relative;
         }
         .header h1 {
@@ -75,15 +82,15 @@
         .section {
             margin-top: 30px;
             padding: 20px;
-            background: #fff;
+            background: var(--secondary-bg-color);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             scroll-margin-top: 100px;
-            color: black;
+            color: var(--primary-color);
         }
         .dark-mode .section { background: #555; color: white; }
         .dark-mode-toggle {
-            background: #ffcc00;
+            background: var(--secondary-bg-color);
             border: none;
             padding: 10px;
             cursor: pointer;
@@ -97,17 +104,17 @@
             border-collapse: collapse;
             margin: 20px 0;
             border-width: 20px;
-            border-color: white;
+            border-color: var(--primary-color);
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid var(--primary-color);
             padding: 10px;
             text-align: left;
             line-height:175% 
         }   
         th  {
-            background-color: rgb(173, 249, 173);
-            color: rgb(7, 7, 7);
+            background-color: var(--primary-bg-color);
+            color: var(--primary-color);
         }
     </style>
     <script>
