@@ -24,13 +24,12 @@
             transition: background 0.3s, color 0.3s;
         }
         .dark-mode {
-            background: linear-gradient(to right, #0d0d0d, #fefdfd);
-            color: #fff;
+            --primary-color: #ECDFCC;
+            --secondary-color: #697565;
+            --primary-bg-color:#1E201E;
+            --secondary-bg-color: #3C3D37;
         }
-        .dark-mode th {
-            background-color: #ea7575;
-            color: white
-        }
+
         .sidebar {
             width: 300px;
             background: var(--primary-bg-color);
@@ -50,18 +49,12 @@
             transition: background 0.3s;
             font-weight: bold;
         }
-        .dark-mode .sidebar a:hover {
-            background: #f40808;
-            color: black;
-            border-radius: 5px;
-        }
+
         .sidebar a:hover {
             background:var(--secondary-bg-color);
             color: var(--secondary-color);
             border-radius: 5px;
         }
-        .dark-mode .sidebar { background: #222;}
-        .dark-mode .sidebar a { color: #fff; }  
         .content {
             margin-left: 320px;
             padding: 20px;
@@ -88,9 +81,8 @@
             scroll-margin-top: 100px;
             color: var(--primary-color);
         }
-        .dark-mode .section { background: #555; color: white; }
         .dark-mode-toggle {
-            background: var(--secondary-bg-color);
+            background: var(--primary-bg-color);
             border: none;
             padding: 10px;
             cursor: pointer;
