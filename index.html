@@ -131,32 +131,52 @@
             text-decoration: none;
             font-weight: bold;
         }
-        ol {
+        ol.journal-list {
             counter-reset: item;
             list-style-type: none;
         }
 
-        ol li:before {
+        ol.journal-list li:before {
             content: 'J' counter(item, decimal) '. ';
             counter-increment: item;
         }
 
-        ol.custom-counter {
+        ol.conference-counter {
             counter-reset: custom-item;
             list-style-type: none;
         }
 
-        ol.custom-counter li:before {
+        ol.conference-counter li:before {
             content: 'C' counter(custom-item, decimal) '. ';
             counter-increment: custom-item;
+        }
+        .ifm { 
+			border: 5px var(--primary-bg-color); 
+			border-radius: 8px; 
+			margin: 2% ;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Space between iframes */
+            align-items: center;
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
+            // Setting dark mode default on page load
             document.body.classList.add('dark-mode');
             document.querySelector('.dark-mode-toggle i').classList.replace('fa-moon', 'fa-sun');
             document.head.style.th.background-color.replace('green','red');
+
+            // Setting <li> font-sizes as per the next elements.
+            /*document.querySelectorAll("li").forEach(li => {
+            let firstChild = li.firstElementChild;
+            if (firstChild) {
+                let fontSize = window.getComputedStyle(firstChild).fontSize;
+                li.style.setProperty("--marker-size", fontSize);
+            }*/
         });
+
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
             const icon = document.querySelector('.dark-mode-toggle i');
@@ -292,8 +312,7 @@
         
         <div id="research" class="section">
             <h2>Research Projects</h2>
-            <ol>
-                
+            <ol>                
             <div class="project">
                 <h2><li> Design, Development and Validation of an Affordable, Portable Neonatal Hearing Screening System</li></h2>
                 <p><strong>Category:</strong> Doctoral Research Project</p>
@@ -442,7 +461,7 @@
             <h2>Research Publications</h2>
             <h3>Peer-Reviewed Journal Articles</h3>
         <div class="publication">
-            <ol>
+            <ol class="journal-list">
             <li>
                 <strong>Spatiotemporal analysis of interictal EEG for automated seizure detection and classification.</strong>
                 <p>Biomedical Signal Processing and Control 79 (2023): 104086. <a href="https://www.sciencedirect.com/science/article/abs/pii/S174680942200550X" target="_blank">[Read Paper]</a></p>
@@ -474,7 +493,7 @@
         
         <h3>Conferences/Symposiums Publications</h3>
         <div class="publication">
-            <ol class = "custom-counter">
+            <ol class = "conference-counter">
             <li>
                 <strong>Design and Development of a Bimodal, Auditory Event-Related Potential Extractor System for Neonatal Hearing Screening.</strong>
                 <p></p>EECS Research Student Symposium, IISc, 2024. <a href="https://eecs.iisc.ac.in/EECS2024/resources/BookofAbstracts_final.pdf" target="_blank">[Read Abstract]</a></p>
@@ -508,7 +527,7 @@
             <li>
                 <strong>Design and optimization of single electron transistor based 4-bit arithmetic and logic unit at room temperature operation.</strong>
                 <p>IEEE International Symposium on Nanoelectronic and Information Systems (iNIS), 2017 <a href="https://doi.org/10.1109/iNIS.2017.17" target="_blank">[Read Paper]</a></p>
-            </ol class = "custom-counter">
+            </ol>
         </div>
 
         
@@ -550,40 +569,28 @@
 
         <div id="demonstrations" class="section">
             <h2>Demonstrations</h2>
-            <p>
-                <ol>
-                    <li><strong>Demo Title:</strong> Event-Related Potential Extraction System Development and Applications.<br>
-                        <p> <strong>Event Type:</strong> Brain, Computation, and Learning (BCL-2023) Workshop <br></p>
-                        <p> <strong>Date:</strong> January 09-13, 2023 <br></p>
-                        <p> <strong>Venue:</strong> Faculty Hall, Indian Institute of Science, Bangalore.<br></p>
-                        <img src="/BCL-Demo.jpeg" alt="Event Image" width="800px" height="480px" style="display: block; margin: 0 auto;">
-                    </li>
-                    <br>
-                    <li><strong>Demo Title:</strong> Single Event P300 Extractor<br>
-                        <p> <strong>Event Type:</strong> Project Completion Demonstration <br></p>
-                        <p> <strong>Date:</strong> June 08,09, 2022 <br></p>
-                        <p> <strong>Venue:</strong> Defence Institute of Physiology & Allied Sciences (DIPAS), DRDO, Delhi<br></p>
-                    </li>
-                    <br>
-                </ol>
-            </p>
-            <br>
-            <br>
+            <ol>
+                <li><strong>Demo Title:</strong> Event-Related Potential Extraction System Development and Applications.<br>
+                    <p> <strong>Event Type:</strong> Brain, Computation, and Learning (BCL-2023) Workshop <br></p>
+                    <p> <strong>Date:</strong> January 09-13, 2023 <br></p>
+                    <p> <strong>Venue:</strong> Faculty Hall, Indian Institute of Science, Bangalore.<br></p>
+                    <img src="/BCL-Demo.jpeg" alt="Event Image" width="800px" height="480px" style="display: block; margin: 0 auto; align: center;">
+                </li>
+                <li><strong>Demo Title:</strong> Single Event P300 Extractor<br>
+                    <p> <strong>Event Type:</strong> Project Completion Demonstration <br></p>
+                    <p> <strong>Date:</strong> June 08,09, 2022 <br></p>
+                    <p> <strong>Venue:</strong> Defence Institute of Physiology & Allied Sciences (DIPAS), DRDO, Delhi<br></p>
+                </li>
+            </ol>
             <h2>Demo Videos</h2>
             <p>Here is a quick demonstration video of the developed auditory evoked ERP (MMN) extraction system</p>
-            <br>
             <div style="text-align: center;">
                 <iframe width="560" height="365" src="https://www.youtube.com/embed/PA5JfunwVz8?si=etkeONhsP6DBumqJ" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div> 
-            <br>
-            <br>
             <p>Here is a quick demonstration video of the developed visually evoked ERP (P300) extraction system</p>
-            <br>
             <div style="text-align: center;">
                 <iframe width="560" height="365" src="https://www.youtube.com/embed/3mPqSgOAkqg?si=u9h7D7i2V1yOTiuN" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <br>
-            <br>
         </div>    
 
         <div id="awards" class="section">
@@ -619,15 +626,30 @@
             <h2>Additional Achievements</h2>
             <ol>    
             <li><p>Secured a Score of 709/1000 (AIR 1667 - 99.35%tile) in GATE 2013 – National Level Postgraduation Entrance Exam.</p></li>
-            <li></li><p>Currently at 313th rank out of 158264 active members of MATLAB Cody – an online platform to solve coding problems</p></li>
-            <li></li><p>Represented my college in several intercollegiate chess competitions during my undergrad and post-grad studies.</p></li>
-            <li></li><p>Secured All India Rank - 40 in CSIR JRF NET (Engineering Science) 2012 – National Level Exam to assess technical knowledge and aptitude..</p></li>
+            <li><p>Currently at 313th rank out of 158264 active members of MATLAB Cody – an online platform to solve coding problems</p></li>
+            <li><p>Represented my college in several intercollegiate chess competitions during my undergrad and post-grad studies.</p></li>
+            <li><p>Secured All India Rank - 40 in CSIR JRF NET (Engineering Science) 2012 – National Level Exam to assess technical knowledge and aptitude..</p></li>
         </ol>
         </div>
 
         <div id="teaching" class="section">
             <h2>Teaching Assistantship</h2>
-            
+            <h2>Teaching Assistantship</h2>
+        <p><strong>NPTEL Online Lectures (During Ph.D., Course Instructor: Prof. Hardik J. Pandya)</strong></p>
+
+            <strong>Introductory Neuroscience & Neuro-Instrumentation Video Lectures</strong> (Co-instructor: Dr. Mahesh Jayachandra)<br>
+
+            <div class="ifm">
+                <iframe width="45%" height="315" src="https://www.youtube.com/embed/Qv-H6QSYKhA?si=CVX2u1sBPCLw8nj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="45%" height="315" src="https://www.youtube.com/embed/KbUZ2MhL_vU?si=B1rbHd6I5idnuR1L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="45%" height="315" src="https://www.youtube.com/embed/cTuWtn7ntyw?si=ujgVWLOf44EHPT-1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="45%" height="315" src="https://www.youtube.com/embed/ECcajveLbCI?si=LOJy9iaTdn77wipS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+                <p> <strong>Neural Science for Engineers Instrumentation</strong> (Co-instructor: Dr. Vikas V)</strong></p>
+                <div class="ifm">
+                    <iframe width="45%" height="315" src="https://www.youtube.com/embed/7JgWQUOYPoE?si=uPjI-AAihyOI8Mnl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="45%" height="315" src="https://www.youtube.com/embed/rJdm1w5VCL8?si=rTwLAJ6q-2nXe-r5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
