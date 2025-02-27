@@ -117,6 +117,39 @@
             margin: 10px auto;
             border-radius: 10px;
         }
+        .publication {
+            text-align: left;
+            margin-bottom: 20px;
+            background: var(--primary-bg-color);
+            color: var(--primary-color);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .publication a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+        }
+
+        ol li:before {
+            content: 'J' counter(item, decimal) '. ';
+            counter-increment: item;
+        }
+
+        ol.custom-counter {
+            counter-reset: custom-item;
+            list-style-type: none;
+        }
+
+        ol.custom-counter li:before {
+            content: 'C' counter(custom-item, decimal) '. ';
+            counter-increment: custom-item;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -268,7 +301,7 @@
                 <img src="/p1.jpg" alt="Experimental Flow of Auditory Brainstem Response (ABR) and Mismatch Negativity (MMN) Extraction">
                 <p style="text-align: center;"><em> Simplified Experimental Flow of the Auditory Brainstem Response (ABR) and Mismatch Negativity (MMN) Extraction.</em></p>
             </div>
-
+            <br>    
 
             <div class="project">
                 <h2><li>Design and Validation of an Algorithm to Detect and Classify Epileptic Seizures</li></h2>
@@ -277,23 +310,37 @@
                 <img src="/p2.jpg" alt="IED Pattern Extraction for Epileptic Seizure Detection">
                 <p style="text-align: center;"><em> Simplified Illustration of the Developed Approach for Automated Interictal Epileptiform Discharges (IED) Pattern Extraction Based Epileptic Seizure Detection and Classification.</em></p>
             </div>
+            <br>  
 
             <div class="project">
                 <h2><li>Design, Development, and Validation of a Wearable Headband for Single Event Extraction for attention and working memory assessment using Visually evoked P300 ERPs </li></h2>
                 <p><strong>Category:</strong> Additional Project during Ph.D.</p>
-                <p><strong>Achievements:</strong> One Conference Publication - Presented at BIOCAS 2022, Taipei, Taiwan</p>
+                <p><strong>Achievements:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/9948657"  target="_blank"> One Conference Publication - Presented at BIOCAS 2022</a></p>
                 <img src="/p3.jpg" alt="Flow Diagram of the P300 ERP Extraction and Validation using the Developed System versus the Reference System.">
 
                 <p style="text-align: center;"><em> Flow Diagram of the P300 ERP Extraction and Validation using the Developed System versus the Reference System.</em></p>
             </div>
+            <br>  
 
             <div class="project">
-                <h2><li> Design and Development of Implantable Electrode Arrays for Neurophysiological Signature Extraction from Rodents to Assess AED efficacy  </li></h2>
+                <h2><li> Design and Development of Micor Electrode Arrays for Neural Signature Extraction from Rodents to Assess AED efficacy  </li></h2>
                 <p><strong>Category:</strong> Additional Project during Ph.D.</p>
-                <p><strong>Achievements:</strong> Two Journal Publications </p>
-                <img src="/p3.png" alt="Flow Diagram of the P300 ERP Extraction and Validation using the Developed System versus the Reference System.">
-                <p style="text-align: center;"><em> Flow Diagram of the P300 ERP Extraction and Validation using the Developed System versus the Reference System.</em></p>
-            </div>    
+                <p><strong>Achievements:</strong> <a href="https://link.springer.com/article/10.1007/s10544-022-00632-0"  target="_blank"> One Journal Publication with Ph.D. colleauge </a>  </p>
+                <img src="/p4.jpg" alt="Flow Diagram of the P300 ERP Extraction and Validation using the Developed System versus the Reference System.">
+                <p style="text-align: center;"><em> Flexible MEA based rodent model to understand efficacy of anti epileptic drugs</em></p>
+            </div> 
+            <br>     
+   
+
+            <div class="project">
+                <h2><li> Design and Development of Microneedle understanding epileptic activity distribution for rodent model  </li></h2>
+                <p><strong>Category:</strong> Additional Project during Ph.D.</p>
+                <p><strong>Achievements:</strong> <a href="https://link.springer.com/article/10.1007/s10544-023-00672-0"  target="_blank"> One Journal Publication with Ph.D. colleauge </a>  </p>
+                <img src="/p5.jpg" alt="Flow Diagram of the P300 ERP Extraction and Validation using the Developed System versus the Reference System.">
+                <p style="text-align: center;"><em> Microneedle based rodent model to understand epileptic seizure distribution</em></p>
+            </div> 
+            <br>
+
             </ol>
         </div>
         
@@ -393,7 +440,79 @@
         
         <div id="publications" class="section">
             <h2>Publications</h2>
-            <p>Peer-reviewed journal and conference papers in IEEE, BioCAS, and more.</p>
+            <h3>Peer-Reviewed Journal Articles</h3>
+        <div class="publication">
+            <ol>
+            <li>
+                <strong>Spatiotemporal analysis of interictal EEG for automated seizure detection and classification.</strong>
+                <p>Biomedical Signal Processing and Control 79 (2023): 104086. <a href="https://www.sciencedirect.com/science/article/abs/pii/S174680942200550X" target="_blank">[Read Paper]</a></p>
+            </li>
+            <br>
+            <li>
+                <strong>Automated ABR and MMN Extraction using Customized Headband for Hearing Screening.</strong>
+                <p>Biomedical Signal Processing and Control 94 (2024): 106264. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1746809424003227" target="_blank">[Read Paper]</a></p>
+            </li>
+            <br>
+            <li>    
+                <strong>Design and fabrication of a microelectrode array for studying epileptiform discharges from rodents.</strong>
+            <p>Biomedical Microdevices 25, no. 3 (2023): 31. <a href="https://link.springer.com/article/10.1007/s10544-023-00672-0" target="_blank">[Read Paper]</a></p>
+            </li>
+            <br>
+            <li>
+                <strong>A flexible implantable microelectrode array for recording electrocorticography signals from rodents.</strong>
+                <p>Biomedical Microdevices 24, no. 4 (2022): 31. <a href="https://link.springer.com/article/10.1007/s10544-022-00632-0" target="_blank">[Read Paper]</a></p>
+            </li>
+            <br>        
+            <li>
+                <strong>Electronic nose: A non-invasive technology for breath analysis of diabetes and lung cancer patients.</strong>
+                <p>Journal of Breath Research 13, no. 2 (2019): 024001. <a href="https://doi.org/10.1088/1752-7163/aafc77" target="_blank">[Read Paper]</a></p>
+            </li>
+            <br>
+        </div>
+        
+
+        
+        <h3>Conferences/Symposiums Publications</h3>
+        <div class="publication">
+            <ol class = "custom-counter">
+            <li>
+                <strong>Design and Development of a Bimodal, Auditory Event-Related Potential Extractor System for Neonatal Hearing Screening.</strong>
+                <p></p>EECS Research Student Symposium, IISc, 2024. <a href="https://eecs.iisc.ac.in/EECS2024/resources/BookofAbstracts_final.pdf" target="_blank">[Read Abstract]</a></p>
+            </li>
+            <br>                    
+            <li>
+                <strong>Flexible Microelectrode Array for Chronic Electrocorticography Recording under Different Neurophysiological Conditions.</strong>
+                <p>IEEE EMBS Conference on Neural Engineering (NER 2023). <a href="https://ieeexplore.ieee.org/abstract/document/10123820" target="_blank">[Read Paper]</a></p>
+            </li>
+            <br>
+            <li>
+                <strong>Design, Development, and Validation of a Portable Visual P300 Event-Related Potential Extraction System.</strong>
+                <p>IEEE Biomedical Circuits and Systems Conference (BioCAS), 2022. <a href="https://doi.org/10.1109/BioCAS54905.2022.9948657" target="_blank">[Read Paper]</a></p>
+            </li>
+            <br>
+            <li>
+                <strong>Teaching Cognitive Neuroscience: Neuro-Instrumentation, an Indian Perspective.</strong>
+                <p>Society for Neuroscience (SfN, 2022). <a href="https://www.abstractsonline.com/pp8/#!/10619/presentation/75128" target="_blank">[Read Abstract]</a></p>
+            </li>
+            <br>
+            <li>
+                <strong>Dynamic Variations in P300 Attention and Working Memory Components in Males and Females, in an Indian Cohort.</strong></p>
+                <p>Society for Neuroscience (SfN, 2022). <a href="https://www.abstractsonline.com/pp8/#!/10619/presentation/64508" target="_blank">[Read Abstract]</a></p>
+            </li>
+            <br>
+            <li>
+                <strong>Design and Development of a Headband for Cortical Response Extraction</strong>
+                <p>EECS Research Student Symposium, IISc, 2021 <a href="https://eecs.iisc.ac.in/EECS2021/resources/EECS_2021_BookofAbstracts.pdf" target="_blank">[Read Abstract]</a></p>
+            </li>
+            <br>
+            <li>
+                <strong>Design and optimization of single electron transistor based 4-bit arithmetic and logic unit at room temperature operation.</strong>
+                <p>IEEE International Symposium on Nanoelectronic and Information Systems (iNIS), 2017 <a href="https://doi.org/10.1109/iNIS.2017.17" target="_blank">[Read Paper]</a></p>
+            </ol class = "custom-counter">
+        </div>
+
+        
+
         </div>
 
         <div id="patents" class="section">
