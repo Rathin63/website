@@ -20,15 +20,15 @@ body {
     --secondary-bg-color: #3C3D37;
 }
 .sidebar {
-    width: 300px;
+    width: 50px;
     background: var(--primary-bg-color);
-    height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 20px;
+    margin-top: 200px;
     color: var(--primary-color);
-    overflow-y: auto;
+    font-size: 20px;
+}
+.sidebar:hover {
+    width: 320px;
 }
 .sidebar a {
     display: block;
@@ -37,6 +37,11 @@ body {
     text-decoration: none;
     transition: background 0.3s;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sidebar-icon {
+    margin-right: 20px;
 }
 .sidebar a:hover {
     background:var(--secondary-bg-color);

@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Setting dark mode default on page load
     document.body.classList.add('dark-mode');
     document.querySelector('.dark-mode-toggle i').classList.replace('fa-moon', 'fa-sun');
-    document.head.style.th.background-color.replace('green','red');
 
     // Setting <li> font-sizes as per the next elements.
     /*document.querySelectorAll("li").forEach(li => {
