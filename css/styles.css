@@ -4,7 +4,6 @@
     --primary-bg-color:#6482AD;
     --secondary-bg-color:#7FA1C3;
 }
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -20,7 +19,6 @@ body {
     --primary-bg-color:#1E201E;
     --secondary-bg-color: #3C3D37;
 }
-
 .sidebar {
     width: 300px;
     background: var(--primary-bg-color);
@@ -40,7 +38,6 @@ body {
     transition: background 0.3s;
     font-weight: bold;
 }
-
 .sidebar a:hover {
     background:var(--secondary-bg-color);
     color: var(--secondary-color);
@@ -151,7 +148,6 @@ ol.conference-counter li:before {
     gap: 10px; /* Space between iframes */
     align-items: center;
 }
-
 .home-button {
     position: fixed;
     bottom: 20px;
@@ -164,7 +160,6 @@ ol.conference-counter li:before {
     font-size: 18px;
     text-decoration: none;
 }
-
 .home-button:hover {
-background-color: var(--secondary-bg-color);
+    background-color: var(--secondary-bg-color);
 }
