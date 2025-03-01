@@ -23,7 +23,7 @@ body {
     width: 50px;
     background: var(--primary-bg-color);
     position: fixed;
-    margin-top: 200px;
+    margin-top: 100px;
     color: var(--primary-color);
     font-size: 20px;
 }
