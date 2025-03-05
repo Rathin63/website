@@ -48,6 +48,11 @@ body {
     color: var(--secondary-color);
     border-radius: 5px;
 }
+.sidebar a.active {
+    background: var(--secondary-bg-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+}
 .content {
     margin-left: 320px;
     padding: 20px;
