@@ -108,12 +108,30 @@ th  {
     color: var(--primary-color);
     text-align: center;
 }
+
+.project {
+    background: var(--primary-bg-color);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .project img {
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     display: block;
-    margin: 10px auto;
     border-radius: 10px;
+}
+
+.project h2 {
+    background: var(--secondary-bg-color);
+    color: var(--primary-color);
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin: 0px;
 }
 .publication {
     text-align: left;
@@ -172,4 +190,11 @@ ol.conference-counter li:before {
 }
 .home-button:hover {
     background-color: var(--secondary-bg-color);
+}
+
+.proj-highlight {
+    background: linear-gradient(to right, var(--secondary-bg-color), var(--primary-bg-color) 30%);
+    color: var(--primary-color);
+    padding: 15px;
+    margin-top: 20px;
 }
