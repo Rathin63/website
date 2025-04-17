@@ -24,6 +24,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, { rootMargin: "-50% 0px -50% 0px", threshold: 0 });
 
     sections.forEach(section => observer.observe(section));
+
+    // Select all video containers
+    const videoContainers = document.querySelectorAll(".video-container");
+
+    videoContainers.forEach(container => {
+        const videoBox = container.querySelector(".video-box");
+        const leftButton = container.querySelector(".left-button");
+        const rightButton = container.querySelector(".right-button");
+        const ytFrames = container.querySelectorAll(".yt-frame");
+
+        // Calculate the width of each video (including margin if any)
+        const videoWidth = ytFrames[0].offsetWidth;
+
+        // Scroll left
+        leftButton.addEventListener("click", () => {
+            if (videoBox.scrollLeft === 0) {
+                // If at the start, scroll to the last video
+                videoBox.scrollTo({
+                    left: videoBox.scrollWidth - videoBox.clientWidth,
+                    behavior: "smooth"
+                });
+            } else {
+                // Otherwise, scroll one video width to the left
+                videoBox.scrollBy({
+                    left: -videoWidth,
+                    behavior: "smooth"
+                });
+            }
+        });
+
+        // Scroll right
+        rightButton.addEventListener("click", () => {
+            if (videoBox.scrollLeft + videoBox.clientWidth >= videoBox.scrollWidth) {
+                // If at the end, scroll to the first video
+                videoBox.scrollTo({
+                    left: 0,
+                    behavior: "smooth"
+                });
+            } else {
+                // Otherwise, scroll one video width to the right
+                videoBox.scrollBy({
+                    left: videoWidth,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 });
 
 function toggleDarkMode() {
