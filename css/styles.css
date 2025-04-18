@@ -154,7 +154,6 @@ a {
     text-decoration: none;
     font-weight: bold;
 }
-a
 ol.journal-list {
     counter-reset: item;
     list-style-type: none;
