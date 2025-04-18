@@ -113,7 +113,7 @@ th  {
     text-align: center;
 }
 
-.project {
+.project, .award-card, .demo-card {
     display: inline-block;
     vertical-align: top;
     background: var(--primary-bg-color);
@@ -124,14 +124,14 @@ th  {
     max-width: 1000px;
 }
 
-.project img {
+.project img, .demo-card img {
     width: 100%;
     max-width: 900px;
     display: block;
     border-radius: 10px;
 }
 
-.project h2,.award-text h2 {
+.project h2,.award-text h2, .demo-card h2 {
     background: var(--secondary-bg-color);
     color: var(--primary-color);
     padding: 15px;
@@ -200,7 +200,7 @@ ol.conference-counter li:before {
     background-color: var(--secondary-bg-color);
 }
 
-.proj-highlight {
+.proj-highlight, .demo-highlight {
     background: linear-gradient(to right, var(--secondary-bg-color), var(--primary-bg-color) 30%);
     color: var(--primary-color);
     padding: 15px;
@@ -291,14 +291,4 @@ ol.conference-counter li:before {
 }
 .read-more-btn:hover {
     color: var(--link-hover-color);
-}
-.award-card {
-    display: inline-block;
-    vertical-align: top;
-    background: var(--primary-bg-color);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 1000px;
 }
