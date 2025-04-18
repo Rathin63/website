@@ -71,6 +71,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
+
+    // Select all "Read More" buttons
+    const readMoreButtons = document.querySelectorAll(".read-more-btn");
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const longPara = button.previousElementSibling; // Get the .long-para element
+            longPara.classList.toggle("expanded"); // Toggle the "expanded" class
+
+            // Update button text based on the state
+            if (longPara.classList.contains("expanded")) {
+                button.textContent = "Read Less";
+            } else {
+                button.textContent = "Read More";
+            }
+        });
+    });
 });
 
 function toggleDarkMode() {

@@ -128,7 +128,7 @@ th  {
     border-radius: 10px;
 }
 
-.project h2 {
+.project h2,.award-text h2 {
     background: var(--secondary-bg-color);
     color: var(--primary-color);
     padding: 15px;
@@ -233,4 +233,66 @@ ol.conference-counter li:before {
     white-space: nowrap;
     scrollbar-color: var(--primary-bg-color) var(--secondary-bg-color);
     scroll-snap-type: x mandatory;
+}
+.img-container {
+    position: relative;
+    padding-bottom: 25px;
+}
+.img-container img {
+    width: 800px;
+    height: 480px;
+}
+.overlay-text {
+    position: absolute;
+    width: 780px;
+    bottom: 13px;
+    left: 0;
+    background: linear-gradient(to right, rgb(0,0,0,1), rgb(0,0,0,0.6), rgb(0,0,0,1));
+    color: var(--primary-color);
+    padding: 10px;
+    text-align: left;
+}
+.long-para {
+    position: relative;
+    overflow: hidden;
+    max-height: 3.6em; /* Limit to 3 lines */
+    line-height: 1.2em; /* Adjust line height */
+    transition: max-height 0.3s ease;
+    display: inline; /* Ensure inline display for text */
+}
+.long-para.expanded {
+    max-height: none; /* Remove height restriction when expanded */
+}
+.dots {
+    display: inline; /* Show dots by default */
+}
+.long-para.expanded .dots {
+    display: none; /* Hide dots when expanded */
+}
+.more-text {
+    display: none; /* Hidden by default */
+}
+.long-para.expanded .more-text {
+    display: inline; /* Show when expanded */
+}
+.read-more-btn {
+    background-color: transparent;
+    color: var(--link-color);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px; /* Add spacing between text and button */
+    display: inline; /* Ensure button is inline */
+    text-decoration: underline;
+}
+.read-more-btn:hover {
+    color: var(--link-hover-color);
+}
+.award-card {
+    background: var(--primary-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
