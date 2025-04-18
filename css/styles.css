@@ -114,11 +114,14 @@ th  {
 }
 
 .project {
+    display: inline-block;
+    vertical-align: top;
     background: var(--primary-bg-color);
     border-radius: 15px;
     padding: 30px;
-    margin: 20px 0;
+    margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
 }
 
 .project img {
@@ -290,9 +293,12 @@ ol.conference-counter li:before {
     color: var(--link-hover-color);
 }
 .award-card {
+    display: inline-block;
+    vertical-align: top;
     background: var(--primary-bg-color);
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
 }
