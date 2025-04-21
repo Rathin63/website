@@ -291,3 +291,19 @@ ol.conference-counter li:before {
 .read-more-btn:hover {
     color: var(--link-hover-color);
 }
+.skill-table {
+    width: 600px;
+    display: inline-block;
+    border-radius:5%;
+    background-color: var(--primary-bg-color);
+    padding: 20px;
+    margin: 20px;
+}
+.skill-table th, .skill-table td {
+    padding: 10px;
+    border: 0px;
+}
+
+.skill-table td:nth-child(1) {
+    width: 500px
+}
