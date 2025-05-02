@@ -19,7 +19,9 @@
         <a href="#demonstrations"><i class="fa fa-heartbeat sidebar-icon"></i>Demonstrations</a>
         <a href="#awards"><i class="fa fa-trophy sidebar-icon"></i>Awards & Recognitions</a>
         <a href="#achievements"><i class="fa fa-star sidebar-icon"></i>Achievements</a>
+        <a href="#gallery"><i class="fa fa-camera sidebar-icon"></i>Gallery</a>
         <a href="#teaching"><i class="fa fa-line-chart sidebar-icon"></i>Teaching Assistantship</a>
+        <a href="#contact"><i class="fa fa-address-card sidebar-icon"></i>Contact</a>
     </div>
     <div class="content">
         <div class="header">
@@ -456,7 +458,7 @@
                 <p class="demo-highlight"> <strong>Venue:</strong> Defence Institute of Physiology & Allied Sciences (DIPAS), DRDO, Delhi</p>
             </div>
 
-        </div>    
+        </div>  
 
         <div id="awards" class="section">
             <h2>Awards and Recognitions</h2>
@@ -522,6 +524,179 @@
                 <li><p>Represented my college in several intercollegiate chess competitions during my undergrad and post-grad studies.</p></li>
                 <li><p>Secured All India Rank - 40 in CSIR JRF NET (Engineering Science) 2012 – National Level Exam to assess technical knowledge and aptitude..</p></li>
             </ol>
+        </div>
+        
+        <div id="gallery" class="section">
+            <h2>Gallery</h2>
+                        <div class="gallery-container">
+                            <button class="gallery-nav prev" onclick="scrollGallery(-1)">&#10094;</button>
+                            <div class="gallery-wrapper">
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>Thesis Defense (April 2024)</h2>
+                                    <img src="img/Thesis Defense.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>BIOCAS Poster Presentation (Oct 2022)</h2>
+                                    <img src="img/BIOCAS.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>JSS Institute of Speech and Hearing - Dharwad Visit (July 2024)</h2>
+                                    <img src="img/JSS.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>IEEE INIS Paper Presentation (Dec 2017)</h2>
+                                    <img src="img/IEEE.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>IEEE INIS Paper Presentation (Dec 2017)</h2>
+                                    <img src="img/IEEE2.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>Qualcomm Innovation Fellowship Certificate (Feb 2018)</h2>
+                                    <img src="img/QInF.jpg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>BEES Lab Family</h2>
+                                    <img src="img/BEES.jpg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>BIOCAS Interactions</h2>
+                                    <img src="img/BIOCAS2.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>Fab Lab Days at NanoFab Lab IISc</h2>
+                                    <img src="img/CR.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>Fab Lab Days at NanoFab Lab IISc</h2>
+                                    <img src="img/CR.jpeg" alt="Event Image" class="gallery-image">
+                                </div>
+                                <div class="gallery-item" onclick="openFullscreen(this)">
+                                    <h2>Gandhian Young Technology Innovation Award</h2>
+                                    <img src="img/GYTI_Certi.jpg" alt="Event Image" class="gallery-image">
+                                </div>
+                            </div>
+                            <button class="gallery-nav next" onclick="scrollGallery(1)">&#10095;</button>
+                        </div>
+
+                        <script>
+                            let scrollIndex = 0;
+
+                            function scrollGallery(direction) {
+                                const wrapper = document.querySelector('.gallery-wrapper');
+                                const items = document.querySelectorAll('.gallery-item');
+                                const itemWidth = items[0].offsetWidth;
+                                scrollIndex = Math.max(0, Math.min(scrollIndex + direction, items.length - 1));
+                                wrapper.scrollTo({
+                                    left: scrollIndex * itemWidth,
+                                    behavior: 'smooth'
+                                });
+                            }
+
+                            function openFullscreen(item) {
+                                const img = item.querySelector('img');
+                                const fullscreenDiv = document.createElement('div');
+                                fullscreenDiv.classList.add('fullscreen-overlay');
+                                fullscreenDiv.innerHTML = `
+                                    <div class="fullscreen-content">
+                                        <img src="${img.src}" alt="${img.alt}">
+                                        <button class="close-fullscreen" onclick="closeFullscreen()">&#10006;</button>
+                                    </div>
+                                `;
+                                document.body.appendChild(fullscreenDiv);
+                            }
+
+                            function closeFullscreen() {
+                                const fullscreenDiv = document.querySelector('.fullscreen-overlay');
+                                if (fullscreenDiv) {
+                                    fullscreenDiv.remove();
+                                }
+                            }
+                        </script>
+
+                        <style>
+                            .gallery-container {
+                                position: relative;
+                                width: 100%;
+                                max-width: 600px;
+                                margin: auto;
+                                overflow: hidden;
+                            }
+
+                            .gallery-wrapper {
+                                display: flex;
+                                overflow-x: auto;
+                                scroll-behavior: smooth;
+                            }
+
+                            .gallery-item {
+                                flex: 0 0 auto;
+                                width: 100%;
+                                text-align: center;
+                                cursor: pointer;
+                            }
+
+                            .gallery-item img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                            }
+
+                            .gallery-nav {
+                                background-color: rgba(0, 0, 0, 0.5);
+                                color: white;
+                                border: none;
+                                cursor: pointer;
+                                padding: 10px;
+                                font-size: 18px;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                z-index: 1;
+                            }
+
+                            .gallery-nav.prev {
+                                left: 0;
+                            }
+
+                            .gallery-nav.next {
+                                right: 0;
+                            }
+
+                            .fullscreen-overlay {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.8);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 1000;
+                            }
+
+                            .fullscreen-content {
+                                position: relative;
+                            }
+
+                            .fullscreen-content img {
+                                max-width: 90%;
+                                max-height: 90%;
+                            }
+
+                            .close-fullscreen {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                background-color: rgba(0, 0, 0, 0.7);
+                                color: white;
+                                border: none;
+                                font-size: 24px;
+                                cursor: pointer;
+                                padding: 5px 10px;
+                            }
+                        </style>
         </div>
 
         <div id="teaching" class="section">
@@ -619,6 +794,20 @@
 
             </table>
         </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>If you have any questions or would like to get in touch, please feel free to reach out to me via email at <a href="mailto:rathin.joshi@gmail.com">rathin.joshi@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rathin-joshi" target="_blank" title="LinkedIn">
+                    <i class="fa fa-linkedin-square" style="font-size: 24px; margin-right: 10px;"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=example" target="_blank" title="Google Scholar">
+                    <i class="fa fa-graduation-cap" style="font-size: 24px; margin-right: 10px;"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
