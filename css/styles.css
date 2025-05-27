@@ -307,3 +307,70 @@ ol.conference-counter li:before {
 .skill-table td:nth-child(1) {
     width: 500px
 }
+.education-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 50px; /* Remove horizontal padding so buttons can overlap */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.education-card {
+    flex: 0 0 300px; /* Fixed width for each card */
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    scroll-snap-align: start;
+}
+
+.education-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+.education-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.education-scroll-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.scroll-left,
+.scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.scroll-left {
+    left: 0;
+}
+
+.scroll-right {
+    right: 0;
+}
+
+.scroll-left:hover,
+.scroll-right:hover {
+    background-color: var(--secondary-bg-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+
