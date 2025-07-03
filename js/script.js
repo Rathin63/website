@@ -88,6 +88,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         });
     });
+
+    // Education scroll buttons
+    const educationWrapper = document.querySelector('.education-scroll-wrapper');
+    if (educationWrapper) {
+        const educationContainer = educationWrapper.querySelector('.education-container');
+        const scrollLeftButton = educationWrapper.querySelector('.scroll-left');
+        const scrollRightButton = educationWrapper.querySelector('.scroll-right');
+
+        scrollLeftButton.addEventListener("click", () => {
+            educationContainer.scrollBy({
+                left: -300, // Adjust based on card width
+                behavior: "smooth"
+            });
+        });
+
+        scrollRightButton.addEventListener("click", () => {
+            educationContainer.scrollBy({
+                left: 300, // Adjust based on card width
+                behavior: "smooth"
+            });
+        });
+    }
 });
 
 function toggleDarkMode() {
