@@ -92,8 +92,35 @@ body {
     position: fixed;
     top: 15px;
     right: 15px;
-    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
+.glass-button {
+    font-size: large;
+    position: fixed;
+    top: 15px;
+    right: 150px;
+    padding: 12px 20px;
+    background: var(--primary-bg-color)
+    color: var(--primary-color);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.glass-button:hover {
+    background: var(--secondary-bg-color);
+    color: var(--secondary-color);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -372,5 +399,3 @@ ol.conference-counter li:before {
     background-color: var(--secondary-bg-color);
     transform: translateY(-50%) scale(1.1);
 }
-
-
