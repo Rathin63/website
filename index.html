@@ -801,12 +801,29 @@
 
     </div>
   
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-        <i class="fa fa-sun-o" style="color:var(--primary-color)"></i>
+<!-- Top-right action buttons -->
+<div class="top-actions">
+
+    <a href="CV_Nov26.pdf"
+       class="glass-button"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="View my academic CV">
+        <i class="fa fa-file-text-o"></i>
+        View CV
+    </a>
+
+    <button class="dark-mode-toggle"
+            onclick="toggleDarkMode()"
+            type="button"
+            aria-label="Toggle dark mode">
+        <i class="fa fa-sun-o"></i>
+        <span>Theme</span>
     </button>
-    <a href="#" class="home-button fa fa-arrow-up"></a>
-    
-    <a href="CV.pdf" class="glass-button" target="_blank">📄 View CV</a>
+
+</div>
+
+<a href="#" class="home-button fa fa-arrow-up"></a>
     
 </body>
 </html>
